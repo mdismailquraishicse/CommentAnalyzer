@@ -18,5 +18,3 @@ def textPreprocess(text):
     text = ''.join([i for i in text if i.isnumeric()==False]) # remove numeric values
     text = ' '.join([stemmer.stem(i) for i in text.split() if i not in stopwords.words('english')]) # stemming and remove stopwords
     return text
-
-# df['processed_text'] = df['CONTENT'].apply(remove_stop_punc_lower)
